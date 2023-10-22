@@ -5,6 +5,7 @@ class Entidad(models.Model):
     id=models.BigAutoField(primary_key=True)
     nombre=models.CharField(max_length=30, default='')
     logo=models.ImageField(default='')
+    
 
 class Comunicado(models.Model):
     id=models.BigAutoField(primary_key=True)

@@ -1,1 +1,20 @@
 {% extends 'CER2/base.html' %}
+{% block content %}
+
+<div class="row"> 
+{%for comunicado in comunicados%}
+ <div class="col-4">
+ <div class="card" style="width: 18rem;">
+    <div tag="titulo"> <h2>{{comunicado.titulo}} </h2></div>
+    <div tag="departamento">{{comunicado.entidad.nombre}}</div>
+    <div class="card-body">
+      <p class="card-text"> {{comunicado.detalle}} </p>
+    </div>
+  </div>
+</div>
+{%endfor%}
+</div>
+
+{% endblock %}
+
+
