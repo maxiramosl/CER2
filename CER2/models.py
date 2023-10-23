@@ -5,6 +5,9 @@ class Entidad(models.Model):
     id=models.BigAutoField(primary_key=True)
     nombre=models.CharField(max_length=30, default='')
     logo=models.ImageField(default='')
+
+    def __str__(self) -> str:
+        return self.nombre
     
 
 class Comunicado(models.Model):
@@ -24,4 +27,7 @@ class Comunicado(models.Model):
     fecha_ultima_modificacion=models.DateTimeField(auto_now=True)
     publicado_por=models.CharField(max_length=30, default='') #CAMBIAR
     modificado_por=models.CharField(max_length=30, default='') #CAMBIAR
+
+    def __str__(self) -> str:
+        return self.titulo
 

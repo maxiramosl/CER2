@@ -1,0 +1,28 @@
+<div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-inner">
+    
+{% for  comunicado in comunicados %}
+<div class="carousel-item active">
+  <div class="card mx-auto p-2" style="width: 20rem;" id="Cartas">
+    <div id="titulo"> <h5>{{comunicado.titulo}} </h5></div>
+    <div id="departamento"> <h6>{{comunicado.entidad.nombre}}</h6></div>
+    <div class="card-body"> 
+      <p class="card-text"> {{comunicado.detalle}} </p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
