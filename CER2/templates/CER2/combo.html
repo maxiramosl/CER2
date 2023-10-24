@@ -1,0 +1,10 @@
+
+<form method="GET" action="{% url 'web' %}">
+<select class="form-select" style="width: 10rem; margin-top: 10px; border-color: #3D30A2;" onchange="this.form.submit()" name="Seleccionada">
+    <option value="Todos" {% if selecto == "Todos" %} selected {% endif %}>...</option>
+    {% for entidad in entidades %}
+    <option value="{{entidad.nombre}}" {% if selecto == entidad.nombre %} selected {% endif %}>{{entidad.nombre}}</option>
+    {% endfor %}
+    
+  </select>
+</form>

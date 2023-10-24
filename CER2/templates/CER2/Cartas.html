@@ -4,21 +4,16 @@
      <div class="card mx-auto p-2" style="width: 15rem; height: 20rem;" id="Cartas">
         <div id="titulo"> <h5>{{comunicado.titulo}} </h5></div>
         <div id="departamento"> <h6>{{comunicado.entidad.nombre}}</h6></div>
-        <div class="d-none d-md-block">
-        <div class="card-body"> 
+         <div class="d-none d-sm-block">
+         <div class="card-body"> 
           <p class="card-text"> {{comunicado.detalle}} </p>
-        </div>
-        </div>
-        <div class="d-none d-sm-block d-md-none">
-        <div class="card-body">
-           <p class="card-text">{{comunicado.detalle_corto}}</p>
-        </div>
-        </div>
-        <div class=".d-block .d-sm-none">
-          <div class="card-body">
+         </div>
+         </div>
+         <div class="d-md-none">
+         <div class="card-body">
              <p class="card-text">{{comunicado.detalle_corto}}</p>
-          </div>
-          </div>
+         </div>
+         </div>
       </div>
     </div>
     {%endfor%}

@@ -2,41 +2,38 @@
 {% block content %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'CER2/estilos.css'%}">
+<div class="row" id="top">
+  <div class="col-xl-1 col-md-1"></div>
+  <div class="col-xl-2 col-md-2 col-sm-12"> <img src={% static "CER2/Logo.png" %} class="img-fluid mx-auto d-block" style="height: 10rem;" alt="..."> </div>
+  <div class="col-xl-8 col-md-8 d-none d-sm-block"> <h1 id="tituloGrande">Sistema integrado de notificaciones</h1> </div>
+  </div>
 
 <div class="d-xxl-none" id="Mediano-pequeno">
-   <div class="row">
-    <div class="col-xl-1 col-md-1"></div>
-    <div class="col-xl-2 col-md-2 col-sm-12"> <img src={% static "CER2/Logo.png" %} class="img-fluid mx-auto d-block" style="height: 10rem;" alt="..."> </div>
-    <div class="col-xl-8 col-md-8 d-none d-sm-block"> <A id="tituloGrande">Sistema integrado de notificaciones</A> </div>
-    </div>
+   
    <div class="d-none d-sm-block" id="Mediano">
-    <div class="row">
+    <div class="row" style="margin-top: 10px;">
       <div class="col-1"></div>
       <div class="col-1">
-       <a class="btn btn-primary" href="http://127.0.0.1:8000/" role="button">inicio</a>
+       <a class="btn btn-primary" href="http://127.0.0.1:8000/" role="button" style="border-color: #3D30A2; background-color: #F5F5F5; color: black;">inicio</a>
        </div>
       <div class="col-1">
-       <a class="btn btn-primary" href="http://127.0.0.1:8000/admin" role="button">administracion</a>
+       <a class="btn btn-primary" href="http://127.0.0.1:8000/admin" role="button" style="border-color: #3D30A2; background-color: #F5F5F5; color: black;">administracion</a>
        </div>
     </div>
    </div> 
    <div class="row">
-    <p>COMBO!</p>
-
+    <div class="col-sm-1 col-3"></div>
+    <div class="col-3">
+    {% include "CER2/combo.html" %}
+    </div>
     </div>
 
   <div class="row">
     {% include "CER2/Cartas.html" %}
   </div>
 </div>
-
-
 <div class="d-none d-xxl-block" id="grande">
-  <div class="row" id="TopGrande">
-    <div class="col-2"> <img src={% static "CER2/Logo.png" %} class="img-fluid" alt="..."> </div>
-    <div class="col-8"> <A id="tituloGrande">Sistema integrado de notificaciones</A></div>
-    <div class="col-2"> <img src="..." class="img-fluid" alt="..."> </div>
-  </div>
+  
   <div class="row"> 
     <div class="col-3"></div>
     <div class="col-6"></div>{% include "CER2/Carrusel.html" %} </div>

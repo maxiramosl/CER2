@@ -1,9 +1,9 @@
-<div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+<div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-interval="5000">
   <div class="carousel-inner">
     
-{% for  comunicado in comunicados %}
-<div class="carousel-item active">
-  <div class="card mx-auto p-2" style="width: 20rem;" id="Cartas">
+{% for  comunicado in comunicadosC %}
+<div class="carousel-item {% if comunicado == comunicadosC|first %} active {% endif %}" >
+  <div class="card mx-auto p-2" style="width: 50rem; height: 20rem; margin:10px; border-color: #3D30A2;" id="carrusel">
     <div id="titulo"> <h5>{{comunicado.titulo}} </h5></div>
     <div id="departamento"> <h6>{{comunicado.entidad.nombre}}</h6></div>
     <div class="card-body"> 
