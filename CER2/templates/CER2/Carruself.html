@@ -1,0 +1,12 @@
+{% load static %}
+<div id="otre" class="carousel slide" data-bs-ride="carousel" data-interval="1">
+  <div class="carousel-inner">
+      
+  {% for  comunicado in comunicadosC %}
+  <div class="carousel-item {% if comunicado == comunicadosC|first %} active {% endif %}" >
+    <img src="{{comunicado.entidad.logo}}"  class="d-block w-100" alt="ouuuu">
+  </div>
+  {% endfor %}
+      
+  </div>
+</div>

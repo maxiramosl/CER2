@@ -1,0 +1,19 @@
+
+#departamento{
+    color: grey;
+}
+#Cartas{
+    margin: 2rem;
+    padding: 0px;
+    border-color: #3D30A2;
+    background-color: #F5F5F5;
+}
+
+#top{
+    background-color: #3D30A2;
+}
+#tituloGrande{
+    color: white;
+    margin-top: 3rem;
+
+}
